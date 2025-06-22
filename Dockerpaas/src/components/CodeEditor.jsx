@@ -48,8 +48,12 @@ function CodeEditor({ language, fileName, description }) {
     setCurrentDescription(description || ""); // Keep updated
   }, [description]);
   useEffect(() => {
-  console.log("📩 [CodeEditor] Props received:", { language, fileName, description });
-}, [language, fileName, description]);
+    console.log("📩 [CodeEditor] Props received:", {
+      language,
+      fileName,
+      description,
+    });
+  }, [language, fileName, description]);
 
   // 🧠 Get extension from language
   const getExtension = (lang) => {
@@ -219,7 +223,7 @@ function CodeEditor({ language, fileName, description }) {
         <div className="flex-1 w-full lg:w-1/2 focus-within:ring-2 focus-within:ring-[#A074C4] transition duration-200">
           <Editor
             key={language}
-            height="400px" 
+            height="400px"
             language={language} // ✅ this updates live
             theme={darkMode ? "vs-dark" : "light"}
             value={code}
@@ -256,18 +260,18 @@ function CodeEditor({ language, fileName, description }) {
           {/* Output Terminal */}
           <div>
             <h2
-              className={`"text-lg font-semibold ${
+              className={`text-lg font-semibold ${
                 darkMode ? "text-white" : "text-[#985dc9]"
-              } mb-2"`}
+              } mb-2`}
             >
               Output:
             </h2>
             <pre
-              className={` "whitespace-pre-wrap text-sm ${
+              className={`whitespace-pre-wrap text-sm ${
                 darkMode
                   ? "bg-[#353535] text-white"
                   : "bg-[#e9d8fb] text-[#353535] border border-purple-300"
-              } p-3 rounded h-48 overflow-auto"`}
+              } p-3 rounded max-h-[200px] overflow-auto`}
             >
               {output}
             </pre>
