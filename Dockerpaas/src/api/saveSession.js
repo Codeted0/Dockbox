@@ -19,7 +19,7 @@ export const saveSession = async ({ name, language, code, description }) => {
   console.log("🔍 Session Payload:", payload); // helpful!
 
   const response = await axios.post(
-    "http://localhost:5000/api/sessions/save-session",
+    `${import.meta.env.VITE_BACKEND_URL}/api/sessions/save-session`,
     payload,
     {
       headers: {

@@ -1,9 +1,9 @@
 // backend/index.js
-import express from 'express';
-import cors from 'cors';
-import { connectDB } from './db.js';
-import sessionRoutes from './routes/sessionRoutes.js';
-import executeRoutes from './routes/executeRoutes.js';
+import express from "express";
+import cors from "cors";
+import { connectDB } from "./db.js";
+import sessionRoutes from "./routes/sessionRoutes.js";
+import executeRoutes from "./routes/executeRoutes.js";
 
 const app = express();
 app.use(cors());
@@ -16,12 +16,20 @@ const startServer = async () => {
   app.get("/", (req, res) => {
     res.send("🚀 Dockbox Backend is Live!");
   });
+  // Allow frontend access (adjust Vercel URL as needed)
+  app.use(
+    cors({
+      origin: ["http://localhost:5173", "https://dockbox.vercel.app"],
+      credentials: true,
+    })
+  );
 
-  app.use('/api/execute', executeRoutes);
-  app.use('/api/sessions', sessionRoutes);
+  app.use("/api/execute", executeRoutes);
+  app.use("/api/sessions", sessionRoutes);
 
-  app.listen(5000, () => {
-    console.log('🚀 Server running on http://localhost:5000');
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
   });
 };
 

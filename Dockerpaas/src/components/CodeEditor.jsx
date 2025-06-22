@@ -72,8 +72,9 @@ function CodeEditor({ language, fileName, description }) {
   };
 
   const handleRunCode = async () => {
+     const backendURL = import.meta.env.VITE_BACKEND_URL;
     console.log("🔁 Sending code to backend:", {
-      url: "http://localhost:5000/run",
+      url: `${backendURL}/api/execute/run`,
       code,
       language,
       input,
@@ -82,13 +83,16 @@ function CodeEditor({ language, fileName, description }) {
     });
 
     try {
-      const response = await fetch("http://localhost:5000/api/execute/run", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ code, language, input, fileName }),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/execute/run`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ code, language, input, fileName }),
+        }
+      );
 
       const data = await response.json();
       console.log("✅ Response:", data);

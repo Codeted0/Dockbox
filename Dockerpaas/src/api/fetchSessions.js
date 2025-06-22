@@ -6,11 +6,15 @@ export const fetchSessions = async () => {
   if (!user) throw new Error("User not authenticated");
 
   const token = await user.getIdToken();
-  const response = await axios.get(`http://localhost:5000/api/sessions/get-sessions/${user.uid}`, {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
+
+  const response = await axios.get(
+    `${import.meta.env.VITE_BACKEND_URL}/api/sessions/get-sessions/${user.uid}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
 
   return response.data;
 };
