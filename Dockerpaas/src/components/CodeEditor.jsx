@@ -219,7 +219,7 @@ function CodeEditor({ language, fileName, description }) {
         <div className="flex-1 w-full lg:w-1/2 focus-within:ring-2 focus-within:ring-[#A074C4] transition duration-200">
           <Editor
             key={language}
-            height="100%"
+            height="400px" 
             language={language} // ✅ this updates live
             theme={darkMode ? "vs-dark" : "light"}
             value={code}
