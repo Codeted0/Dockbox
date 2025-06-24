@@ -14,7 +14,7 @@ Built by **Gauri Patil**, Dockbox is designed to simulate a real-world online co
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js, Tailwind CSS, CodeMirror
+- **Frontend**: React.js, Tailwind CSS, Monaco Editor
 - **Backend**: Node.js, Express.js
 - **Containerization**: Docker
 - **Database**: MongoDB (Atlas/local)
