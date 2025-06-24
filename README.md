@@ -1,7 +1,6 @@
 
 # 🚀 Dockbox — Online Code Execution Platform with Docker
 
-![Dockbox Animation](https://your-gif-or-animation-url.com)
 
 **Dockbox** is a full-stack web application that enables users to write, run, and execute code in real-time directly from their browser using Docker containers. It supports multiple programming languages and provides a secure, isolated environment for each execution — just like an online compiler.
 
@@ -30,16 +29,6 @@ Built by **Gauri Patil**, Dockbox is designed to simulate a real-world online co
 - 📄 Clean, responsive UI with real-time output display
 - 🧠 Future support for session-saving and authentication
 - 🔐 Secure backend architecture using ephemeral containers
-
----
-
-## 📸 Screenshots
-
-> *(Add actual screenshots or GIFs below)*
-
-```
-![Dockbox UI](https://i.imgur.com/yourImageCode.png)
-
 
 ```
 
