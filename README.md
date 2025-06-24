@@ -107,7 +107,7 @@ This project is licensed under the **MIT License** © 2025 **Gauri Patil**
 
 **Gauri Patil**  
 Full Stack Developer | DevOps Enthusiast | CS Engineer  
-📫 Email: gauri.yourmail@example.com  
+📫 Email: gauripatil312004@gmail.com
 🔗 [LinkedIn](www.linkedin.com/in/gauri-patil-196009263)  
 🐙 [GitHub](https://github.com/Codeted0)
 
