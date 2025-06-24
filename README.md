@@ -38,7 +38,7 @@ Built by **Gauri Patil**, Dockbox is designed to simulate a real-world online co
 > *(Add actual screenshots or GIFs below)*
 
 ```
-![Dockbox UI]([https://your-screenshot-url.com/ui.png](https://github.com/Codeted0/Dockbox/editor.png ))
+![Dockbox UI](https://github.com/Codeted0/Dockbox/editor.png )
 ```
 
 ---
